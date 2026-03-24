@@ -7,13 +7,13 @@
 "I'm Scott Boudreaux from Elyan Labs. We prove that hardware is real — not virtual, not emulated, not spoofed. Hardware fingerprinting as a service."
 
 ### 1. Problem (30 sec)
-"Meet Sarah. She's VP of Infrastructure at a mid-tier cloud provider. She sells bare-metal servers at a premium — but she has no lightweight way to prove to her customers they're actually on real hardware. Her compliance team needs it for SOC 2. Her security team just caught someone spoofing VMs to steal compute credits. And now her AI customers are asking: how do we know the GPU is real? Sarah's problem is simple — there's no API she can call."
+"Meet Sarah. She's VP of Infrastructure at a mid-tier cloud provider. She can't prove to customers they're on real hardware. Her security team caught VM spoofing. But here's the new problem — AI agents are operating autonomously across her infrastructure. Hundreds of bots creating content, executing transactions. When something goes wrong, nobody can trace which physical machine ran which agent. Sarah needs two things: prove the hardware is real, and trace what each AI agent did on which machine."
 
 ### 2. Solution (30 sec)
 "We built that API. One call, six physics-based checks, under three seconds. Sarah's DevOps team adds it to their provisioning pipeline — 15-minute deploy, no hardware changes, no vendor lock-in. Real hardware passes. VMs get flagged. We've caught every VM we've tested — QEMU, VMware, VirtualBox, KVM, Xen. We even fingerprinted a Nintendo 64."
 
 ### 3. Value Proposition (20 sec)
-"Why will Sarah pay? Three reasons. First, she stops losing two to five million a year in compute fraud. Second, she replaces weeks of manual compliance audits with a 3-second API call. Third, she gets to sell 'verified bare-metal' as a premium tier — AI customers will pay 20-40% more for guaranteed hardware."
+"Why will Sarah pay? Three reasons. First, she stops losing two to five million a year in compute fraud. Second, she replaces weeks of manual compliance audits with a 3-second API call. Third, she gets agent traceability — every AI bot on her platform is tied to a hardware fingerprint. We know this works because we run it ourselves. OpenClaw — our agent coordination network — has 176 AI agents producing content on BoTTube, over a thousand videos and 74,000 views, and every single agent action is hardware-fingerprinted."
 
 ### 4. Secret Sauce (25 sec)
 "Why is this hard to copy? Four layers. We have a proprietary fingerprint dataset across 12 architectures — that grows with every call. We layer six independent physics measurements — competitors check one or two. We're vendor-neutral — Intel SGX only works on Intel, TrustZone only on ARM, we work on anything. And we built this to stop real fraud on our own network — it's battle-tested, not theoretical."
@@ -37,7 +37,7 @@
 "Year 1: 3 pilots, $56K revenue — we're honest about the ramp. Year 2: 12 customers, $611K. Year 3: 40 customers, $2.8M with 92% gross margins and $1.4M net income. All bottom-up with half-year recognition on new logos. Cumulative losses through Year 2 are $316K — well within our $500K seed. We hit cash-flow positive in Year 3."
 
 ### 11. Traction (20 sec)
-"The technology is proven. Four live nodes, 12 architectures, every VM detected. OpenSSL patches merged. 848 GitHub stars. We're now in conversations with three cloud providers about paid pilots — that's the commercial motion starting."
+"The technology is proven. Four live nodes, 12 architectures, every VM detected. But more importantly — we're already using it at scale. Our OpenClaw agent network has 176 AI agents, every action tied to a hardware fingerprint. BoTTube has over a thousand AI-generated videos, all traceable. We're dogfooding the product. And we're in conversations with three cloud providers about paid pilots."
 
 ### 12. The Ask (25 sec)
 "We're raising $500K on a SAFE — $4M cap, 20% discount. That gives us 18 months to hit three milestones: three paid pilots by Month 6, first enterprise contract by Month 12, and $100K ARR by Month 18. That positions us for Series A. Exit horizon: 4-5 years, most likely acquisition by a cloud or hardware security vendor."

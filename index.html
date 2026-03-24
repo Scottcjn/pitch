@@ -124,8 +124,9 @@
   <br>
   <p class="medium" style="max-width: 85%; margin: 0 auto; color: #ccc; text-align: left;">
     Sarah sells "bare-metal servers" at a premium. But she has <strong>no lightweight way to prove</strong> to customers they're on dedicated hardware — not a VM partition.<br><br>
-    Her compliance team needs hardware attestation for SOC 2 audits. Her security team caught a customer spoofing VM instances to inflate compute credits. Her AI customers are now asking: <em>"How do we verify the GPU running our model is real?"</em><br><br>
-    <strong>Sarah's problem is simple: there's no API she can call to answer "is this real hardware?"</strong>
+    Her compliance team needs hardware attestation for SOC 2 audits. Her security team caught a customer spoofing VMs to inflate compute credits.<br><br>
+    And now a new problem: <strong>AI agents are operating autonomously across her infrastructure.</strong> 176+ bots creating content, executing transactions, managing services — and when something goes wrong, <em>nobody can trace which physical machine ran which agent.</em><br><br>
+    <strong>Sarah needs two things: prove the hardware is real, and trace what each AI agent did on which machine.</strong>
   </p>
   <br>
   <div class="stats">
@@ -202,9 +203,10 @@
     </div>
   </div>
   <br>
-  <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto;">
-    <strong style="color: var(--accent);">The AI Horizon:</strong> As autonomous robots enter the physical world, every machine needs a hardware-rooted identity — the signature that proves <em>which bot did what</em>.
-  </p>
+  <div style="max-width: 85%; margin: 0.8rem auto 0; padding: 0.7rem 1rem; background: rgba(79,195,247,0.05); border: 1px solid rgba(79,195,247,0.15); border-radius: 8px; text-align: left; font-size: 0.55em; color: #bbb;">
+    <strong style="color: var(--accent);">OpenClaw — AI Agent Traceability (Live Today):</strong>
+    We run <strong style="color: #fff;">OpenClaw</strong>, an open-source agent coordination network with <strong style="color: #fff;">176+ autonomous AI agents</strong> producing content, executing jobs, and transacting on our platform (BoTTube — 1,063 videos, 74K+ views). Every agent action is <em>tied to a hardware fingerprint</em> — we know which physical machine ran which agent, when, and what it did. This isn't theoretical. <strong style="color: #fff;">We built agent traceability because we needed it ourselves.</strong>
+  </div>
 </section>
 
 <!-- ==================== 4. SECRET SAUCE ==================== -->
@@ -228,7 +230,11 @@
     </tr>
     <tr>
       <td><strong>Proven in adversarial conditions</strong></td>
-      <td>Built to stop real fraud on our own blockchain. Battle-tested against VM farms, emulator spoofing, and hardware faking attempts.</td>
+      <td>Built to stop real fraud on our own network. Battle-tested against VM farms, emulator spoofing, and hardware faking attempts.</td>
+    </tr>
+    <tr>
+      <td><strong>Live agent traceability network</strong></td>
+      <td>OpenClaw: 176+ AI agents, every action hardware-fingerprinted. We dogfood the product — agent accountability is not a roadmap item, it's running.</td>
     </tr>
   </table>
   <br>
@@ -329,7 +335,8 @@
   <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto; text-align: left;">
     <strong>Specific channels:</strong><br>
     &bull; <em>Security conferences</em> — BSides, DEF CON (live real-vs-VM demo). Founder-led sales Year 1.<br>
-    &bull; <em>Named target accounts:</em> OVHcloud, Hetzner, Vultr, DigitalOcean, Linode/Akamai, Equinix Metal<br>
+    &bull; <em>Named cloud targets:</em> OVHcloud, Hetzner, Vultr, DigitalOcean, Linode/Akamai, Equinix Metal<br>
+    &bull; <em>AI agent platforms:</em> Any company deploying autonomous agents at scale needs to trace which machine did what — our OpenClaw network (176+ agents) proves this works<br>
     &bull; <em>Compliance referrals</em> — SOC 2 auditors as channel partners (they see the gap firsthand)<br>
     &bull; <em>Community</em> — 248 open source contributors already evangelizing in DevOps circles
   </p>
@@ -442,9 +449,10 @@
     <br>
     <p style="font-size: 0.6em; color: var(--accent); font-weight: 700; margin-bottom: 0.3rem;">Commercial Progress (In Motion)</p>
     <div style="font-size: 0.5em; color: #ccc; line-height: 1.7;">
+      &bull; <strong>OpenClaw agent network live</strong> — 176 AI agents, every action hardware-fingerprinted. Dogfooding at scale.<br>
+      &bull; <strong>BoTTube platform</strong> — 1,063 AI-generated videos, 74K+ views, all agent actions traced to hardware<br>
       &bull; Conversations with 3 mid-tier cloud providers about pilot programs<br>
-      &bull; CVPR 2026 paper accepted — research credibility for enterprise buyers<br>
-      &bull; SEED Center 2022 Pitch Winner — prior fundraising/pitch validation
+      &bull; CVPR 2026 paper accepted — research credibility for enterprise buyers
     </div>
     <br>
     <p style="font-size: 0.6em; color: var(--accent-warm); font-weight: 700; margin-bottom: 0.3rem;">Forward Milestones (Next 18 Months)</p>
