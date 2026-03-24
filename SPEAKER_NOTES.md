@@ -16,7 +16,7 @@
 "Why will Sarah pay? Three reasons. First, she stops losing two to five million a year in compute fraud. Second, she replaces weeks of manual compliance audits with a 3-second API call. Third, she gets agent traceability — every AI bot on her platform is tied to a hardware fingerprint. We know this works because we run it ourselves. OpenClaw — our agent coordination network — has 176 AI agents producing content on BoTTube, over a thousand videos and 74,000 views, and every single agent action is hardware-fingerprinted."
 
 ### 4. Secret Sauce (25 sec)
-"Why is this hard to copy? Four layers. We have a proprietary fingerprint dataset across 12 architectures — that grows with every call. We layer six independent physics measurements — competitors check one or two. We're vendor-neutral — Intel SGX only works on Intel, TrustZone only on ARM, we work on anything. And we built this to stop real fraud on our own network — it's battle-tested, not theoretical."
+"Why is this hard to copy? Five layers. One — proprietary fingerprint dataset across 12 architectures that grows with every call. Two — six independent physics measurements where competitors check one or two. Three — vendor-neutral, works on any CPU. Four — battle-tested against real fraud on our own network. And five — we already run a live agent traceability network. 176 AI agents on OpenClaw, every action hardware-fingerprinted. We're not theorizing about agent accountability — we're doing it."
 
 ### 5. Market (20 sec)
 "TAM: $100B cloud infrastructure market. SAM: $2B for hardware attestation — specifically for cloud providers. SOM: $2.8M by Year 3 — bottoms-up: 40 customers in a land-and-expand model, starting at $25K pilots and growing to $200K mature accounts, plus API usage revenue."
@@ -40,7 +40,7 @@
 "The technology is proven. Four live nodes, 12 architectures, every VM detected. But more importantly — we're already using it at scale. Our OpenClaw agent network has 176 AI agents, every action tied to a hardware fingerprint. BoTTube has over a thousand AI-generated videos, all traceable. We're dogfooding the product. And we're in conversations with three cloud providers about paid pilots."
 
 ### 12. The Ask (25 sec)
-"We're raising $500K on a SAFE — $4M cap, 20% discount. That gives us 18 months to hit three milestones: three paid pilots by Month 6, first enterprise contract by Month 12, and $100K ARR by Month 18. That positions us for Series A. Exit horizon: 4-5 years, most likely acquisition by a cloud or hardware security vendor."
+"We're raising $500K on a SAFE — $4M cap, 20% discount. That gives us 18 months to hit three milestones: three paid pilots by Month 6, first enterprise contract by Month 12, and 12+ customers with $300K ARR by Month 18 as pilots expand. That positions us for Series A. Exit horizon: 4-5 years, most likely acquisition by a cloud or hardware security vendor."
 
 **CLOSE**: "In a world of autonomous machines — the hardware doesn't lie. Thank you."
 
