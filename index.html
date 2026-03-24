@@ -131,15 +131,14 @@
     </div>
     <div class="stat">
       <span class="number" style="color: var(--accent-warm);">0</span>
-      <span class="label">ways to prove<br>bare metal today</span>
+      <span class="label">lightweight ways to<br>prove bare metal</span>
     </div>
   </div>
   <br>
   <p class="medium" style="max-width: 80%; margin: 0 auto; color: #bbb;">
-    Crypto mining farms game rewards with VM armies.<br>
     Cloud providers can't guarantee bare-metal to customers.<br>
-    IoT supply chains can't verify authentic hardware.<br>
-    <strong>And as AI agents and robots enter the physical world —<br>
+    AI infrastructure has no way to verify the hardware running models.<br>
+    <strong>And as autonomous robots and AI agents enter the physical world —<br>
     there's no way to prove which machine did what.</strong>
   </p>
 </section>
@@ -149,7 +148,7 @@
   <h2>Silicon Has a Fingerprint. We Read It.</h2>
   <br>
   <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto 1rem auto;">
-    Six hardware checks that <em>cannot be faked</em> — because they measure <strong>physics</strong>, not software.
+    Six hardware checks that are <em>extremely difficult to replicate</em> — because they measure <strong>physics</strong>, not software.
   </p>
   <div class="checks-grid">
     <div class="check-item">
@@ -200,99 +199,83 @@
     </div>
     <div class="demo-box fail">
       <h4>QEMU Virtual Machine (Fake)</h4>
-      [1/6] Clock Drift ........... <span style="color:#66bb6a">PASS</span> cv=0.049<br>
-      [2/6] Cache Timing .......... <span style="color:#66bb6a">PASS</span><br>
+      [1/6] Clock Drift ........... <span style="color:#ff9800">WARN</span> cv=0.049 <span style="color:#777">(too uniform)</span><br>
+      [2/6] Cache Timing .......... <span style="color:#ff9800">WARN</span> <span style="color:#777">(perfect curve)</span><br>
       [3/6] SIMD Identity ......... <span style="color:#66bb6a">PASS</span><br>
-      [4/6] Thermal Drift ......... <span style="color:#66bb6a">PASS</span><br>
-      [5/6] Instruction Jitter .... <span style="color:#66bb6a">PASS</span><br>
+      [4/6] Thermal Drift ......... <span style="color:#ff9800">WARN</span> <span style="color:#777">(flat response)</span><br>
+      [5/6] Instruction Jitter .... <span style="color:#ff9800">WARN</span> <span style="color:#777">(uniform dist)</span><br>
       [6/6] Anti-Emulation ........ <span style="color:#ef5350; font-weight:700;">FAIL</span><br>
       &nbsp;&nbsp;vm_indicators: [qemu, hypervisor]<br>
-      <span style="color:#ef5350; font-weight: 700;">VERDICT: VIRTUAL MACHINE</span>
+      <span style="color:#ef5350; font-weight: 700;">VERDICT: VIRTUAL MACHINE (5 anomalies)</span>
     </div>
   </div>
   <br>
-  <p class="small">100% VM detection rate across QEMU, VMware, VirtualBox, KVM, Xen &middot; Detection time: &lt;3 seconds<br>We've even fingerprinted a classic Nintendo 64 — if it has a CPU, we can attest it.</p>
+  <p class="small">Detected every VM tested so far: QEMU, VMware, VirtualBox, KVM, Xen &middot; Detection time: &lt;3 seconds<br>We've even fingerprinted a classic Nintendo 64 — from retro consoles to enterprise servers.</p>
 </section>
 
 <!-- ==================== SLIDE 5: TRACTION ==================== -->
 <section>
-  <h2>Already Running in Production</h2>
-  <h3>This is not a whitepaper. This is live infrastructure.</h3>
+  <h2>Pre-Pilot — With Live Infrastructure</h2>
+  <h3>Technology proven. Now seeking design partners.</h3>
   <br>
   <div class="stats">
     <div class="stat">
       <span class="number">4</span>
-      <span class="label">Attestation nodes<br>US + Hong Kong</span>
+      <span class="label">Live attestation nodes<br>US + Hong Kong</span>
     </div>
     <div class="stat">
       <span class="number">12</span>
-      <span class="label">Architectures verified<br>386 to POWER10 — even N64</span>
-    </div>
-    <div class="stat">
-      <span class="number">248</span>
-      <span class="label">Contributors<br>paid in RTC</span>
+      <span class="label">Architectures tested<br>386 to POWER10 — even N64</span>
     </div>
     <div class="stat">
       <span class="number">848</span>
-      <span class="label">GitHub<br>stars</span>
+      <span class="label">GitHub stars<br>across projects</span>
+    </div>
+    <div class="stat">
+      <span class="number">248</span>
+      <span class="label">Open source<br>contributors</span>
     </div>
   </div>
   <br>
-  <div class="stats">
-    <div class="stat">
-      <span class="number" style="color: var(--accent-green);">CVPR '26</span>
-      <span class="label">AI video paper accepted<br>Top CS conference</span>
-    </div>
-    <div class="stat">
-      <span class="number" style="color: var(--accent-green);">OpenSSL</span>
-      <span class="label">Security patches merged<br>Used by billions of devices</span>
-    </div>
-    <div class="stat">
-      <span class="number" style="color: var(--accent-warm);">1,063</span>
-      <span class="label">AI agent videos<br>on BoTTube platform</span>
-    </div>
-  </div>
+  <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto;">
+    <strong>Team credibility:</strong>
+    <span style="color: var(--accent-green);">OpenSSL</span> security patches merged (used by billions) &middot;
+    <span style="color: var(--accent-green);">CVPR 2026</span> paper accepted (AI video generation) &middot;
+    Built fiber for <span style="color: var(--accent);">xAI Colossus 1</span> (Grok's data center)
+  </p>
+  <br>
+  <p class="small">Next milestone: 3 design partners for paid pilot by Q3 2026</p>
 </section>
 
 <!-- ==================== SLIDE 6: MARKET ==================== -->
 <section>
-  <h2>$4.5B Addressable Market</h2>
-  <h3>Three verticals, one technology</h3>
+  <h2>Wedge: Cloud &amp; AI Infrastructure</h2>
+  <h3>Start where the pain is sharpest, expand from there</h3>
   <br>
   <div class="verticals">
-    <div class="vertical-card">
-      <h4>Cloud Infrastructure</h4>
-      <div class="vsize">$100B</div>
+    <div class="vertical-card" style="border-color: var(--accent); border-width: 4px;">
+      <h4>Primary: Cloud &amp; AI Compute</h4>
+      <div class="vsize">$100B+ market</div>
       <p>
-        Prove bare-metal to customers.<br>
-        Detect VM escape attacks.<br>
-        Hardware attestation for compliance.<br>
-        <strong style="color:var(--accent)">Our SAM: $2B</strong>
+        Prove bare-metal to cloud customers.<br>
+        Verify hardware running AI models.<br>
+        Hardware attestation for compliance (SOC 2, FedRAMP).<br>
+        <strong style="color:var(--accent)">Our beachhead: $2B SAM</strong>
       </p>
     </div>
-    <div class="vertical-card" style="border-color: var(--accent-green);">
-      <h4>Crypto &amp; Blockchain</h4>
-      <div class="vsize">$2T</div>
+    <div class="vertical-card" style="border-color: #555;">
+      <h4>Expand: Blockchain &amp; IoT</h4>
+      <div class="vsize" style="font-size: 1em; color: #999;">Adjacent markets</div>
       <p>
-        Proof-of-hardware for validators.<br>
-        Anti-VM-farm for mining rewards.<br>
-        Exchange KYH (Know Your Hardware).<br>
-        <strong style="color:var(--accent-green)">Our SAM: $1.5B</strong>
-      </p>
-    </div>
-    <div class="vertical-card" style="border-color: var(--accent-warm);">
-      <h4>IoT Security</h4>
-      <div class="vsize">$50B</div>
-      <p>
-        Authenticate genuine vs counterfeit devices.<br>
-        Supply chain verification.<br>
-        Fleet identity management.<br>
-        <strong style="color:var(--accent-warm)">Our SAM: $1B</strong>
+        Proof-of-hardware for crypto validators.<br>
+        IoT supply chain &amp; fleet identity.<br>
+        Same technology, different buyers.<br>
+        <strong style="color: #888;">Combined SAM: $2.5B</strong>
       </p>
     </div>
   </div>
   <div style="max-width: 85%; margin: 0.8rem auto 0; padding: 0.8rem 1.2rem; background: rgba(79,195,247,0.05); border: 1px solid rgba(79,195,247,0.15); border-radius: 8px; text-align: left; font-size: 0.6em; color: #bbb;">
-    <strong style="color: var(--accent);">The AI Horizon:</strong> As autonomous robots and AI agents operate in the physical world, every machine will need a unique, unforgeable identity. Hardware fingerprinting becomes the signature that proves <em>which bot did what</em> — accountability for the age of autonomous machines.
+    <strong style="color: var(--accent);">The AI Horizon:</strong> As autonomous robots and AI agents operate in the physical world, every machine will need a unique, hardware-rooted identity. Hardware fingerprinting becomes the signature that proves <em>which bot did what</em> — accountability for the age of autonomous machines.
   </div>
 </section>
 
@@ -321,10 +304,8 @@
     </div>
   </div>
   <br>
-  <p class="medium" style="color: #999;">
-    <strong>+ Token economics:</strong> RTC token (8.3M supply) used for on-chain attestation fees.<br>
-    wRTC bridge to Solana for DEX liquidity. <em>$0.10 reference rate.</em>
-  </p>
+  <p class="small">At 10M attestations/month (single mid-tier cloud provider), Pro tier = $100K MRR.<br>
+  Enterprise contracts target $50-200K ACV. On-chain attestation fees provide additional revenue layer.</p>
 </section>
 
 <!-- ==================== SLIDE 8: WHY US ==================== -->
@@ -386,19 +367,19 @@
   <h2>The Ask</h2>
   <br>
   <div style="font-size: 2em; font-weight: 900; color: #fff; margin-bottom: 0.5rem;">$250K Seed</div>
-  <p class="medium" style="color: #888; margin-bottom: 1.5rem;">API infrastructure &middot; Compliance certifications &middot; Team of 3</p>
+  <p class="medium" style="color: #888; margin-bottom: 1rem;">18 months runway &rarr; 3 design partners &rarr; first enterprise contract</p>
   <div class="ask-grid">
     <div class="ask-item">
-      <h4>API Infrastructure</h4>
-      <p>Scale attestation API from 4 nodes to 50+. Enterprise SLA. SOC 2 compliance.</p>
+      <h4>Months 1-6</h4>
+      <p>Enterprise-ready API. 1 backend engineer hire. 3 paid pilot deployments with cloud/AI infrastructure providers.</p>
     </div>
     <div class="ask-item">
-      <h4>Pilot Customers</h4>
-      <p>Cloud providers, crypto exchanges, IoT manufacturers. We need warm intros.</p>
+      <h4>Months 7-12</h4>
+      <p>First enterprise contract ($50K+ ACV). Scale to 20+ attestation nodes. Begin compliance certification.</p>
     </div>
     <div class="ask-item">
-      <h4>Team Growth</h4>
-      <p>3 hires: backend engineer, sales/BD, DevRel. Currently founder + open source community.</p>
+      <h4>Months 13-18</h4>
+      <p>$100K+ ARR from pilots converting. Position for Series A with proven enterprise demand.</p>
     </div>
   </div>
   <br>
@@ -406,7 +387,7 @@
   <br>
   <div style="font-size: 0.6em; color: #888;">
     Scott Boudreaux &middot; scott@elyanlabs.ai &middot; 337-692-3750<br>
-    <span style="color: var(--accent);">rustchain.org</span> &middot; github.com/Scottcjn &middot; bottube.ai
+    <span style="color: var(--accent);">elyanlabs.ai</span> &middot; github.com/Scottcjn
   </div>
 </section>
 
