@@ -19,7 +19,7 @@
 "Why is this hard to copy? Four layers. We have a proprietary fingerprint dataset across 12 architectures — that grows with every call. We layer six independent physics measurements — competitors check one or two. We're vendor-neutral — Intel SGX only works on Intel, TrustZone only on ARM, we work on anything. And we built this to stop real fraud on our own network — it's battle-tested, not theoretical."
 
 ### 5. Market (20 sec)
-"TAM: $100B cloud infrastructure market. SAM: $2B for hardware attestation — specifically for cloud providers. SOM: $6M ARR by Year 3 — bottoms-up: 40 customers averaging $150K each, plus API usage revenue."
+"TAM: $100B cloud infrastructure market. SAM: $2B for hardware attestation — specifically for cloud providers. SOM: $2.8M by Year 3 — bottoms-up: 40 customers in a land-and-expand model, starting at $25K pilots and growing to $200K mature accounts, plus API usage revenue."
 
 ### 6. Business Model (20 sec)
 "Razor and razor blades. Free tier gets developers in — 100 calls a month. Pro tier is a penny per attestation — usage-based, recurring. Enterprise starts at $25K and expands to $150K as usage grows. 90%+ gross margins. Net revenue retention target: 140%."
@@ -34,7 +34,7 @@
 "I'm a 20-year hardware veteran. My team built the fiber for xAI's Colossus data center — the one powering Grok. I contribute security patches to OpenSSL. I have a CVPR paper. I won the SEED pitch in 2022. Stephen Reed — Ai-Blockchain co-founder and patent holder — is advising on architecture. I'm actively recruiting a cloud CISO and an enterprise SaaS operator to round out the advisory board."
 
 ### 10. Financials (20 sec)
-"Year 1: 3 pilots, $135K revenue. Year 2: 15 customers, $2.3M. Year 3: 40 customers, $6M ARR with 92% gross margins and $2.2M net income. All bottom-up. Burn stays under $25K/month Year 1 — the $500K gives us 18+ months of runway."
+"Year 1: 3 pilots, $56K revenue — we're honest about the ramp. Year 2: 12 customers, $611K. Year 3: 40 customers, $2.8M with 92% gross margins and $1.4M net income. All bottom-up with half-year recognition on new logos. Cumulative losses through Year 2 are $316K — well within our $500K seed. We hit cash-flow positive in Year 3."
 
 ### 11. Traction (20 sec)
 "The technology is proven. Four live nodes, 12 architectures, every VM detected. OpenSSL patches merged. 848 GitHub stars. We're now in conversations with three cloud providers about paid pilots — that's the commercial motion starting."
