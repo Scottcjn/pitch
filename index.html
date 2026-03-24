@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
-
   :root {
     --r-background-color: #0a0a0f;
     --r-main-font: 'Inter', sans-serif;
@@ -23,105 +22,82 @@
     --accent-green: #66bb6a;
     --accent-red: #ef5350;
   }
-
   .reveal { font-weight: 300; }
   .reveal h1 { font-weight: 900; font-size: 2.6em; letter-spacing: -0.03em; }
-  .reveal h2 { font-weight: 700; font-size: 1.6em; letter-spacing: -0.02em; color: var(--accent); }
-  .reveal h3 { font-weight: 600; font-size: 1em; color: #aaa; }
+  .reveal h2 { font-weight: 700; font-size: 1.5em; letter-spacing: -0.02em; color: var(--accent); }
+  .reveal h3 { font-weight: 600; font-size: 0.95em; color: #aaa; }
   .reveal strong { color: #fff; font-weight: 600; }
   .reveal em { color: var(--accent); font-style: normal; }
-
-  .stats { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin: 1.2rem 0; }
-  .stat { text-align: center; padding: 0.8rem 1.2rem; background: rgba(79,195,247,0.08); border: 1px solid rgba(79,195,247,0.2); border-radius: 12px; min-width: 120px; }
-  .stat .number { font-size: 2em; font-weight: 900; color: var(--accent); display: block; line-height: 1; }
-  .stat .label { font-size: 0.55em; color: #999; margin-top: 0.3rem; display: block; text-transform: uppercase; letter-spacing: 0.08em; }
-
-  .compare { width: 90%; margin: 1rem auto; border-collapse: collapse; font-size: 0.7em; }
-  .compare th { color: var(--accent); text-align: left; padding: 0.4rem; border-bottom: 2px solid rgba(79,195,247,0.3); }
-  .compare td { padding: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-
-  .bigquote { font-size: 1.2em; font-weight: 300; color: #fff; font-style: italic; max-width: 80%; margin: 1rem auto; line-height: 1.4; }
+  .stats { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
+  .stat { text-align: center; padding: 0.7rem 1rem; background: rgba(79,195,247,0.08); border: 1px solid rgba(79,195,247,0.2); border-radius: 10px; min-width: 110px; }
+  .stat .number { font-size: 1.8em; font-weight: 900; color: var(--accent); display: block; line-height: 1; }
+  .stat .label { font-size: 0.5em; color: #999; margin-top: 0.2rem; display: block; text-transform: uppercase; letter-spacing: 0.08em; }
+  .compare { width: 90%; margin: 0.8rem auto; border-collapse: collapse; font-size: 0.65em; }
+  .compare th { color: var(--accent); text-align: left; padding: 0.35rem; border-bottom: 2px solid rgba(79,195,247,0.3); }
+  .compare td { padding: 0.35rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .bigquote { font-size: 1.1em; font-weight: 300; color: #fff; font-style: italic; max-width: 80%; margin: 0.8rem auto; line-height: 1.4; }
   .bigquote em { color: var(--accent); }
-
-  .small { font-size: 0.5em; color: #777; }
-  .medium { font-size: 0.65em; }
+  .small { font-size: 0.48em; color: #777; }
+  .medium { font-size: 0.62em; }
   .title-sub { font-size: 1.1em; font-weight: 300; color: #888; margin-top: -0.5rem; }
-
-  .founder-story { text-align: left; max-width: 85%; margin: 0 auto; }
-  .founder-story li { font-size: 0.6em; margin-bottom: 0.4rem; color: #ccc; list-style: none; }
-  .founder-story li::before { content: ''; }
-  .founder-story li strong { color: var(--accent); }
-
-  .checks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem; max-width: 85%; margin: 0.8rem auto; text-align: left; }
-  .check-item { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.58em; }
-  .check-item .check-num { color: var(--accent); font-weight: 900; font-size: 1.3em; line-height: 1; min-width: 20px; }
+  .checks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; max-width: 85%; margin: 0.6rem auto; text-align: left; }
+  .check-item { display: flex; align-items: flex-start; gap: 0.4rem; font-size: 0.55em; }
+  .check-item .check-num { color: var(--accent); font-weight: 900; font-size: 1.2em; line-height: 1; min-width: 18px; }
   .check-item .check-text strong { color: #fff; }
   .check-item .check-text { color: #bbb; line-height: 1.3; }
-
-  .demo-split { display: flex; gap: 1.5rem; justify-content: center; margin: 1rem 0; }
-  .demo-box { flex: 1; max-width: 340px; padding: 1rem; border-radius: 12px; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.45em; line-height: 1.5; }
+  .demo-split { display: flex; gap: 1.2rem; justify-content: center; margin: 0.8rem 0; }
+  .demo-box { flex: 1; max-width: 260px; padding: 0.7rem; border-radius: 10px; text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.42em; line-height: 1.5; }
   .demo-box.pass { background: rgba(102,187,106,0.08); border: 2px solid rgba(102,187,106,0.3); }
   .demo-box.fail { background: rgba(239,83,80,0.08); border: 2px solid rgba(239,83,80,0.3); }
-  .demo-box h4 { font-family: 'Inter', sans-serif; font-size: 1.3em; margin: 0 0 0.4rem 0; }
+  .demo-box h4 { font-family: 'Inter', sans-serif; font-size: 1.2em; margin: 0 0 0.3rem 0; }
   .demo-box.pass h4 { color: var(--accent-green); }
   .demo-box.fail h4 { color: var(--accent-red); }
-
-  .pricing-grid { display: flex; gap: 1rem; justify-content: center; margin: 1rem 0; }
-  .price-card { flex: 1; max-width: 220px; padding: 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; text-align: center; }
+  .pricing-grid { display: flex; gap: 0.8rem; justify-content: center; margin: 0.8rem 0; }
+  .price-card { flex: 1; max-width: 200px; padding: 0.8rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; text-align: center; }
   .price-card.featured { border-color: var(--accent); background: rgba(79,195,247,0.06); }
-  .price-card h4 { color: var(--accent); font-size: 0.75em; margin: 0 0 0.2rem 0; font-weight: 700; }
-  .price-card .price { font-size: 1.6em; font-weight: 900; color: #fff; }
-  .price-card .price-unit { font-size: 0.5em; color: #888; }
-  .price-card p { font-size: 0.45em; color: #999; margin: 0.4rem 0 0 0; line-height: 1.4; }
-
-  .ask-grid { display: flex; gap: 1rem; justify-content: center; margin: 1rem 0; }
-  .ask-item { flex: 1; max-width: 220px; text-align: center; padding: 0.8rem; background: rgba(255,255,255,0.03); border-radius: 12px; }
-  .ask-item h4 { font-size: 0.7em; color: var(--accent); margin: 0 0 0.2rem 0; }
-  .ask-item p { font-size: 0.45em; color: #999; margin: 0; line-height: 1.4; }
-
-  .reveal .slides section { padding: 15px; }
+  .price-card h4 { color: var(--accent); font-size: 0.7em; margin: 0 0 0.2rem 0; font-weight: 700; }
+  .price-card .price { font-size: 1.5em; font-weight: 900; color: #fff; }
+  .price-card .price-unit { font-size: 0.45em; color: #888; }
+  .price-card p { font-size: 0.42em; color: #999; margin: 0.3rem 0 0 0; line-height: 1.4; }
+  .ask-grid { display: flex; gap: 0.8rem; justify-content: center; margin: 0.8rem 0; }
+  .ask-item { flex: 1; max-width: 200px; text-align: center; padding: 0.7rem; background: rgba(255,255,255,0.03); border-radius: 10px; }
+  .ask-item h4 { font-size: 0.65em; color: var(--accent); margin: 0 0 0.2rem 0; }
+  .ask-item p { font-size: 0.42em; color: #999; margin: 0; line-height: 1.4; }
+  .reveal .slides section { padding: 12px; }
   .reveal ul { list-style: none; }
   .reveal ul li::before { content: ''; }
-
-  .vertical-card { padding: 0.8rem; background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; text-align: left; margin-bottom: 0.6rem; }
-  .vertical-card h4 { color: var(--accent); font-size: 0.7em; margin: 0 0 0.2rem 0; font-weight: 700; display: inline; }
-  .vertical-card p { font-size: 0.5em; color: #999; margin: 0.2rem 0 0 0; line-height: 1.3; }
-
-  /* Value prop icons */
-  .vp-grid { display: flex; gap: 1.5rem; justify-content: center; margin: 1.2rem 0; }
-  .vp-item { flex: 1; max-width: 240px; text-align: center; }
-  .vp-item .vp-icon { font-size: 2em; margin-bottom: 0.3rem; }
-  .vp-item h4 { color: var(--accent); font-size: 0.75em; margin: 0 0 0.2rem 0; }
-  .vp-item p { font-size: 0.5em; color: #bbb; margin: 0; line-height: 1.4; }
-
-  /* Petal chart */
-  .petal-container { position: relative; width: 500px; height: 360px; margin: 0.5rem auto; }
-  .petal-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 140px; height: 140px; border-radius: 50%; background: rgba(79,195,247,0.15); border: 2px solid var(--accent); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
-  .petal-center strong { color: var(--accent); font-size: 0.7em; }
-  .petal-center span { color: #999; font-size: 0.4em; }
-  .petal { position: absolute; width: 130px; height: 130px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-  .petal strong { font-size: 0.5em; color: #fff; }
-  .petal span { font-size: 0.38em; color: #bbb; margin-top: 0.15rem; }
+  .vp-grid { display: flex; gap: 1.2rem; justify-content: center; margin: 1rem 0; }
+  .vp-item { flex: 1; max-width: 220px; text-align: center; }
+  .vp-item .vp-icon { font-size: 1.8em; margin-bottom: 0.2rem; }
+  .vp-item h4 { color: var(--accent); font-size: 0.7em; margin: 0 0 0.2rem 0; }
+  .vp-item p { font-size: 0.45em; color: #bbb; margin: 0; line-height: 1.4; }
+  .petal-container { position: relative; width: 480px; height: 340px; margin: 0.3rem auto; }
+  .petal-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 130px; height: 130px; border-radius: 50%; background: rgba(79,195,247,0.15); border: 2px solid var(--accent); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; }
+  .petal-center strong { color: var(--accent); font-size: 0.65em; }
+  .petal-center span { color: #999; font-size: 0.36em; }
+  .petal { position: absolute; width: 120px; height: 120px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .petal strong { font-size: 0.45em; color: #fff; }
+  .petal span { font-size: 0.34em; color: #bbb; margin-top: 0.1rem; }
   .petal-1 { top: 0; left: 50%; transform: translateX(-50%); background: rgba(239,83,80,0.1); border: 1px solid rgba(239,83,80,0.3); }
-  .petal-2 { top: 25%; right: 20px; background: rgba(255,152,0,0.1); border: 1px solid rgba(255,152,0,0.3); }
-  .petal-3 { bottom: 0; right: 60px; background: rgba(171,71,188,0.1); border: 1px solid rgba(171,71,188,0.3); }
-  .petal-4 { bottom: 0; left: 60px; background: rgba(66,165,245,0.1); border: 1px solid rgba(66,165,245,0.3); }
-  .petal-5 { top: 25%; left: 20px; background: rgba(102,187,106,0.1); border: 1px solid rgba(102,187,106,0.3); }
-
-  /* GTM */
-  .gtm-flow { display: flex; gap: 0.3rem; align-items: center; justify-content: center; margin: 1rem 0; }
-  .gtm-step { padding: 0.6rem 0.8rem; background: rgba(79,195,247,0.08); border: 1px solid rgba(79,195,247,0.2); border-radius: 8px; text-align: center; max-width: 180px; }
-  .gtm-step h4 { color: var(--accent); font-size: 0.6em; margin: 0 0 0.2rem 0; }
-  .gtm-step p { font-size: 0.42em; color: #bbb; margin: 0; line-height: 1.3; }
-  .gtm-arrow { color: var(--accent); font-size: 1.2em; }
-
-  /* Financials */
-  .fin-table { width: 80%; margin: 0.8rem auto; border-collapse: collapse; font-size: 0.6em; }
-  .fin-table th { color: var(--accent); padding: 0.4rem; border-bottom: 2px solid rgba(79,195,247,0.3); text-align: right; }
+  .petal-2 { top: 22%; right: 15px; background: rgba(255,152,0,0.1); border: 1px solid rgba(255,152,0,0.3); }
+  .petal-3 { bottom: 0; right: 55px; background: rgba(171,71,188,0.1); border: 1px solid rgba(171,71,188,0.3); }
+  .petal-4 { bottom: 0; left: 55px; background: rgba(66,165,245,0.1); border: 1px solid rgba(66,165,245,0.3); }
+  .petal-5 { top: 22%; left: 15px; background: rgba(102,187,106,0.1); border: 1px solid rgba(102,187,106,0.3); }
+  .gtm-flow { display: flex; gap: 0.2rem; align-items: center; justify-content: center; margin: 0.8rem 0; }
+  .gtm-step { padding: 0.5rem 0.6rem; background: rgba(79,195,247,0.08); border: 1px solid rgba(79,195,247,0.2); border-radius: 8px; text-align: center; max-width: 170px; }
+  .gtm-step h4 { color: var(--accent); font-size: 0.55em; margin: 0 0 0.15rem 0; }
+  .gtm-step p { font-size: 0.38em; color: #bbb; margin: 0; line-height: 1.3; }
+  .gtm-arrow { color: var(--accent); font-size: 1em; }
+  .fin-table { width: 85%; margin: 0.6rem auto; border-collapse: collapse; font-size: 0.55em; }
+  .fin-table th { color: var(--accent); padding: 0.3rem; border-bottom: 2px solid rgba(79,195,247,0.3); text-align: right; }
   .fin-table th:first-child { text-align: left; }
-  .fin-table td { padding: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.06); text-align: right; color: #ccc; }
+  .fin-table td { padding: 0.3rem; border-bottom: 1px solid rgba(255,255,255,0.06); text-align: right; color: #ccc; }
   .fin-table td:first-child { text-align: left; color: #999; }
   .fin-table .highlight { color: var(--accent-green); font-weight: 700; }
+  .founder-story { text-align: left; max-width: 85%; margin: 0 auto; }
+  .founder-story li { font-size: 0.55em; margin-bottom: 0.35rem; color: #ccc; list-style: none; }
+  .founder-story li::before { content: ''; }
+  .founder-story li strong { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -147,9 +123,9 @@
   <h3>Meet Sarah — VP of Infrastructure at a mid-tier cloud provider</h3>
   <br>
   <p class="medium" style="max-width: 85%; margin: 0 auto; color: #ccc; text-align: left;">
-    Sarah sells "bare-metal servers" at a premium. But she has <strong>no way to prove</strong> to her customers that they're actually running on dedicated hardware — not a VM partition.<br><br>
-    Her compliance team needs hardware attestation for SOC 2 audits. Her security team just found a customer spoofing VM instances to inflate compute credits.<br><br>
-    <strong>And now her AI customers are asking:</strong> <em>"How do we know the GPU running our model is real and not virtualized?"</em>
+    Sarah sells "bare-metal servers" at a premium. But she has <strong>no lightweight way to prove</strong> to customers they're on dedicated hardware — not a VM partition.<br><br>
+    Her compliance team needs hardware attestation for SOC 2 audits. Her security team caught a customer spoofing VM instances to inflate compute credits. Her AI customers are now asking: <em>"How do we verify the GPU running our model is real?"</em><br><br>
+    <strong>Sarah's problem is simple: there's no API she can call to answer "is this real hardware?"</strong>
   </p>
   <br>
   <div class="stats">
@@ -158,12 +134,12 @@
       <span class="label">VMs spun up<br>in minutes, for $0</span>
     </div>
     <div class="stat">
-      <span class="number" style="color: var(--accent-warm);">0</span>
-      <span class="label">lightweight ways to<br>prove bare metal</span>
+      <span class="number" style="color: var(--accent-red);">$2-5M</span>
+      <span class="label">annual loss to<br>compute fraud</span>
     </div>
     <div class="stat">
-      <span class="number" style="color: var(--accent-red);">67%</span>
-      <span class="label">of AI compute<br>controlled by 3 cos</span>
+      <span class="number" style="color: var(--accent-warm);">0</span>
+      <span class="label">vendor-neutral APIs<br>for HW attestation</span>
     </div>
   </div>
 </section>
@@ -171,201 +147,191 @@
 <!-- ==================== 2. SOLUTION ==================== -->
 <section>
   <h2>2. The Solution</h2>
-  <h3>Silicon has a fingerprint. We read it.</h3>
+  <h3>One API call. Six physics-based checks. Under 3 seconds.</h3>
   <br>
-  <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto 0.8rem auto;">
-    Six hardware checks that are <em>extremely difficult to replicate</em> — because they measure <strong>physics</strong>, not software.
+  <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto 0.6rem auto; text-align: left;">
+    <strong>Product workflow:</strong> Sarah's DevOps team adds one API call to their provisioning pipeline.<br>
+    Every server runs our 6-check fingerprint on boot. Results stream to a dashboard. Non-hardware returns are flagged instantly.
+    <em>Deploy time: 15 minutes. No hardware changes. No vendor lock-in.</em>
   </p>
   <div class="checks-grid">
-    <div class="check-item">
-      <span class="check-num">1</span>
-      <span class="check-text"><strong>Oscillator Drift</strong><br>Crystal aging creates unique timing signatures</span>
-    </div>
-    <div class="check-item">
-      <span class="check-num">2</span>
-      <span class="check-text"><strong>Cache Timing Profile</strong><br>L1/L2/L3 latency imperfections VMs can't replicate</span>
-    </div>
-    <div class="check-item">
-      <span class="check-num">3</span>
-      <span class="check-text"><strong>SIMD Pipeline Jitter</strong><br>Nanosecond execution variance unique to each chip</span>
-    </div>
-    <div class="check-item">
-      <span class="check-num">4</span>
-      <span class="check-text"><strong>Thermal Drift Entropy</strong><br>Heat curves are physical — every CPU warms differently</span>
-    </div>
-    <div class="check-item">
-      <span class="check-num">5</span>
-      <span class="check-text"><strong>Anti-Emulation Detection</strong><br>Catches hypervisor scheduling &amp; time dilation</span>
-    </div>
-    <div class="check-item">
-      <span class="check-num">6</span>
-      <span class="check-text"><strong>ROM Fingerprint Clustering</strong><br>61 known emulator ROMs — catches retro fakers</span>
-    </div>
+    <div class="check-item"><span class="check-num">1</span><span class="check-text"><strong>Oscillator Drift</strong> — crystal aging signatures</span></div>
+    <div class="check-item"><span class="check-num">2</span><span class="check-text"><strong>Cache Timing</strong> — L1/L2/L3 imperfections</span></div>
+    <div class="check-item"><span class="check-num">3</span><span class="check-text"><strong>SIMD Jitter</strong> — nanosecond execution variance</span></div>
+    <div class="check-item"><span class="check-num">4</span><span class="check-text"><strong>Thermal Drift</strong> — unique heat curves</span></div>
+    <div class="check-item"><span class="check-num">5</span><span class="check-text"><strong>Anti-Emulation</strong> — hypervisor detection</span></div>
+    <div class="check-item"><span class="check-num">6</span><span class="check-text"><strong>ROM Clustering</strong> — emulator ROM database</span></div>
   </div>
-  <br>
   <div class="demo-split">
-    <div class="demo-box pass" style="max-width: 280px; padding: 0.8rem;">
+    <div class="demo-box pass">
       <h4>Real Hardware</h4>
-      Clock Drift ... <span style="color:#66bb6a">PASS</span> cv=0.092<br>
-      Cache/SIMD/Thermal ... <span style="color:#66bb6a">PASS</span><br>
-      Anti-Emulation ... <span style="color:#66bb6a">PASS</span><br>
-      <span style="color:#66bb6a; font-weight: 700;">VERDICT: REAL</span>
+      Clock Drift <span style="color:#66bb6a">PASS</span> cv=0.092 | Cache <span style="color:#66bb6a">PASS</span><br>
+      SIMD <span style="color:#66bb6a">PASS</span> | Thermal <span style="color:#66bb6a">PASS</span> | Anti-Emu <span style="color:#66bb6a">PASS</span><br>
+      <span style="color:#66bb6a; font-weight: 700;">VERDICT: REAL HARDWARE</span>
     </div>
-    <div class="demo-box fail" style="max-width: 280px; padding: 0.8rem;">
-      <h4>QEMU VM</h4>
-      Clock Drift ... <span style="color:#ff9800">WARN</span> <span style="color:#777">(uniform)</span><br>
-      Cache/Thermal ... <span style="color:#ff9800">WARN</span> <span style="color:#777">(flat)</span><br>
-      Anti-Emulation ... <span style="color:#ef5350; font-weight:700;">FAIL</span><br>
+    <div class="demo-box fail">
+      <h4>QEMU Virtual Machine</h4>
+      Clock <span style="color:#ff9800">WARN</span> | Cache <span style="color:#ff9800">WARN</span> (flat)<br>
+      Thermal <span style="color:#ff9800">WARN</span> | Anti-Emu <span style="color:#ef5350; font-weight:700;">FAIL</span><br>
       <span style="color:#ef5350; font-weight: 700;">VERDICT: VM (5 anomalies)</span>
     </div>
   </div>
-  <p class="small">Detected every VM tested: QEMU, VMware, VirtualBox, KVM, Xen &middot; &lt;3 seconds &middot; Even fingerprinted a Nintendo 64</p>
+  <p class="small">Detected every VM tested: QEMU, VMware, VirtualBox, KVM, Xen &middot; Even fingerprinted a Nintendo 64</p>
 </section>
 
 <!-- ==================== 3. VALUE PROPOSITION ==================== -->
 <section>
   <h2>3. Value Proposition</h2>
-  <h3>Why customers will pay for this</h3>
+  <h3>Why cloud providers will pay for this</h3>
   <br>
   <div class="vp-grid">
     <div class="vp-item">
       <div class="vp-icon">&#128176;</div>
-      <h4>Save Money</h4>
-      <p>Cloud providers lose <strong>$2-5M/year</strong> to VM spoofing and compute credit fraud. One attestation call catches it.</p>
+      <h4>Stop Fraud Losses</h4>
+      <p>Cloud providers lose <strong>$2-5M/year</strong> to VM spoofing and compute credit abuse. One API call catches it instantly.</p>
     </div>
     <div class="vp-item">
       <div class="vp-icon">&#9201;</div>
-      <h4>Save Time</h4>
-      <p>Compliance teams spend <strong>weeks</strong> on manual hardware audits. Our API does it in <strong>3 seconds</strong>, continuously.</p>
+      <h4>Automate Compliance</h4>
+      <p>Manual hardware audits take <strong>weeks</strong> and cost <strong>$50K+</strong> per cycle. Our API runs <strong>continuously, in 3 seconds</strong>.</p>
     </div>
     <div class="vp-item">
       <div class="vp-icon">&#128273;</div>
-      <h4>Unlock Revenue</h4>
-      <p>Sell "verified bare-metal" as a <strong>premium tier</strong>. AI customers will pay more for guaranteed hardware.</p>
+      <h4>Sell Premium Tiers</h4>
+      <p>"Verified bare-metal" becomes a <strong>premium product</strong>. AI customers will pay 20-40% more for <strong>guaranteed real hardware</strong>.</p>
     </div>
   </div>
   <br>
   <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto;">
-    <strong style="color: var(--accent);">The AI Horizon:</strong> As autonomous robots enter the physical world, every machine needs a hardware-rooted identity. Our fingerprinting becomes the signature that proves <em>which bot did what</em>.
+    <strong style="color: var(--accent);">The AI Horizon:</strong> As autonomous robots enter the physical world, every machine needs a hardware-rooted identity — the signature that proves <em>which bot did what</em>.
   </p>
 </section>
 
 <!-- ==================== 4. SECRET SAUCE ==================== -->
 <section>
-  <h2>4. Secret Sauce — Why Us, Why Now</h2>
+  <h2>4. Secret Sauce</h2>
+  <h3>Defensibility stack — why this is hard to copy</h3>
   <br>
   <table class="compare">
+    <tr><th>Moat Layer</th><th>What It Means</th></tr>
     <tr>
-      <th>Defensibility</th>
-      <th>Detail</th>
+      <td><strong>Proprietary fingerprint dataset</strong></td>
+      <td>12 architectures profiled (386 to POWER10, including N64). Growing with every attestation. Data flywheel — more calls = better detection.</td>
     </tr>
     <tr>
-      <td><strong>We own the exotic hardware</strong></td>
-      <td>POWER8 S824, PowerPC G4/G5, 486, 386, SPARC, N64 — we test on the real silicon, not simulators</td>
+      <td><strong>Multi-signal physics approach</strong></td>
+      <td>Competitors check 1-2 signals. We layer 6 independent physics measurements. Combined false-positive rate drops exponentially.</td>
     </tr>
     <tr>
-      <td><strong>ISA-level expertise</strong></td>
-      <td>vec_perm, vcipher, vshasigma — instruction-set knowledge that takes years to acquire</td>
+      <td><strong>Architecture-agnostic design</strong></td>
+      <td>Intel SGX = Intel only. ARM TrustZone = ARM only. We work on ANY CPU. No vendor lock-in for buyers.</td>
     </tr>
     <tr>
-      <td><strong>Code in production worldwide</strong></td>
-      <td>Security patches merged into OpenSSL — the crypto library on billions of devices</td>
-    </tr>
-    <tr>
-      <td><strong>12-architecture test lab</strong></td>
-      <td>18 GPUs, 228GB VRAM, 512GB RAM POWER8. Built for $12K (worth $60K). No one else has this range.</td>
+      <td><strong>Proven in adversarial conditions</strong></td>
+      <td>Built to stop real fraud on our own blockchain. Battle-tested against VM farms, emulator spoofing, and hardware faking attempts.</td>
     </tr>
   </table>
   <br>
-  <p class="medium" style="color: #ccc; max-width: 80%; margin: 0 auto;">
-    <strong>Why now?</strong> AI compute demand is exploding. Cloud customers are demanding hardware verification for the first time. No lightweight, API-accessible solution exists. We built the technology for our own blockchain — now we're productizing it for the $100B+ cloud market.
+  <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto;">
+    <strong>Why now?</strong> AI compute demand is exploding. Cloud customers are requesting hardware verification for the first time. No lightweight, vendor-neutral API exists. <strong>Why us?</strong> We own the exotic hardware, we ship to OpenSSL, and we've already solved this for our own network.
   </p>
 </section>
 
 <!-- ==================== 5. MARKET SIZE ==================== -->
 <section>
   <h2>5. Market Size</h2>
+  <h3>Focused on cloud &amp; AI infrastructure attestation</h3>
   <br>
   <div class="stats">
     <div class="stat">
       <span class="number">$100B+</span>
-      <span class="label">TAM<br>Cloud infrastructure</span>
+      <span class="label">TAM<br>Cloud &amp; AI infrastructure<br>CAGR: 22% (Gartner)</span>
     </div>
     <div class="stat">
-      <span class="number" style="color: var(--accent-green);">$4.5B</span>
-      <span class="label">SAM<br>HW attestation across<br>cloud, crypto, IoT</span>
+      <span class="number" style="color: var(--accent-green);">$2B</span>
+      <span class="label">SAM<br>HW attestation for<br>cloud providers</span>
     </div>
     <div class="stat">
-      <span class="number" style="color: var(--accent-warm);">$15M</span>
-      <span class="label">SOM (Year 3)<br>Bottoms-up: 50 enterprise<br>customers &times; $300K ACV</span>
+      <span class="number" style="color: var(--accent-warm);">$6M</span>
+      <span class="label">SOM (Year 3)<br>Bottoms-up below</span>
     </div>
   </div>
   <br>
-  <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto;">
-    <strong>Bottoms-up SOM:</strong> 200+ cloud providers globally need hardware attestation for compliance. We target the mid-tier (not AWS/Azure) where verification is manual or nonexistent. 50 customers at $300K ACV = $15M ARR by Year 3.
+  <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto; text-align: left;">
+    <strong>Bottoms-up SOM:</strong> 200+ mid-tier cloud providers globally (OVH, Hetzner, Vultr, etc.) lack hardware attestation. We target 40 customers by Year 3:<br>
+    &bull; 10 customers at $25K (pilot/starter) = $250K<br>
+    &bull; 20 customers at $75K (growth) = $1.5M<br>
+    &bull; 10 customers at $150K (enterprise expand) = $1.5M<br>
+    &bull; API usage revenue: ~$2.7M (50M attestations/mo)<br>
+    <strong style="color: var(--accent-warm);">Total Year 3 SOM: $6M ARR</strong>
   </p>
-  <br>
-  <p class="small">Cloud infrastructure CAGR: 22% (Gartner 2025) &middot; Hardware security market CAGR: 28% &middot; AI compute spending doubling annually</p>
+  <p class="small">Adjacent markets (blockchain validators, IoT fleet identity) expand SAM to $4.5B+ but are NOT in our Year 1-2 plan.</p>
 </section>
 
 <!-- ==================== 6. BUSINESS MODEL ==================== -->
 <section>
   <h2>6. Business Model</h2>
+  <h3>Recurring SaaS + usage-based API (razor &amp; razor blades)</h3>
   <br>
   <div class="pricing-grid">
     <div class="price-card">
       <h4>Free Tier</h4>
       <div class="price">$0</div>
       <div class="price-unit">100 attestations/mo</div>
-      <p>Developer onboarding.<br>Full 6-check fingerprint.<br>Community support.</p>
+      <p>Developer onboarding.<br>Full 6-check fingerprint.<br>Razor: gets devs in.</p>
     </div>
     <div class="price-card featured">
       <h4>Pro (API)</h4>
       <div class="price">$0.01</div>
       <div class="price-unit">per attestation</div>
-      <p>Cloud providers &amp; exchanges.<br>Batch API. SLA.<br><strong style="color:#fff">Recurring usage-based.</strong></p>
+      <p>Usage-based recurring.<br>Batch API. SLA.<br><strong style="color:#fff">Scales with customer.</strong></p>
     </div>
     <div class="price-card">
       <h4>Enterprise</h4>
-      <div class="price">$25-50K</div>
+      <div class="price">$25-150K</div>
       <div class="price-unit">annual contract</div>
-      <p>On-prem deployment.<br>Compliance reporting.<br>Custom integrations.</p>
+      <p>On-prem + API bundle.<br>Compliance reports.<br><strong style="color:#fff">Land at $25K, expand.</strong></p>
     </div>
   </div>
   <br>
-  <p class="small" style="max-width: 80%; margin: 0 auto;">
-    <strong style="color: #ccc;">Unit economics:</strong> At 10M attestations/month (single mid-tier cloud provider), Pro tier = $100K MRR. Enterprise contracts target $25-50K ACV with 90%+ gross margins (software-only delivery). Razor model: free API onboards developers, enterprise upsell captures budget.
+  <p class="small" style="max-width: 85%; margin: 0 auto;">
+    <strong style="color: #ccc;">Unit economics:</strong> 90%+ gross margins (software delivery). Enterprise ACV starts at $25K (pilot), expands to $75-150K within 12 months as usage grows. Pro tier scales linearly: 10M attestations/mo = $100K MRR per customer. Net revenue retention target: 140%+ (usage expansion).
   </p>
 </section>
 
 <!-- ==================== 7. GO TO MARKET ==================== -->
 <section>
   <h2>7. Go To Market Strategy</h2>
-  <h3>Beachhead: mid-tier cloud &amp; AI infrastructure providers</h3>
+  <h3>Beachhead: mid-tier cloud providers (OVH, Hetzner, Vultr class)</h3>
   <br>
   <div class="gtm-flow">
     <div class="gtm-step">
-      <h4>Open Source Hook</h4>
-      <p>Free fingerprinting tools on GitHub (848 stars). Developers discover us organically.</p>
+      <h4>1. OSS Discovery</h4>
+      <p>Free tools on GitHub (848 stars). DevOps engineers find us organically. <strong style="color:#fff">Cost: $0</strong></p>
     </div>
     <span class="gtm-arrow">&rarr;</span>
     <div class="gtm-step">
-      <h4>Developer Adoption</h4>
-      <p>Free API tier. Target DevOps teams at cloud providers via dev.to, HN, security conferences.</p>
+      <h4>2. Free API Trial</h4>
+      <p>100 calls/mo. Prove value in staging. Convert in 30 days. <strong style="color:#fff">CAC: ~$500</strong></p>
     </div>
     <span class="gtm-arrow">&rarr;</span>
     <div class="gtm-step">
-      <h4>Enterprise Upsell</h4>
-      <p>Once integrated, sell compliance packages to CISOs. Land &amp; expand within org.</p>
+      <h4>3. Paid Pilot</h4>
+      <p>$25K annual. Deploy in production. 90-day success criteria. <strong style="color:#fff">Cycle: 60-90 days</strong></p>
+    </div>
+    <span class="gtm-arrow">&rarr;</span>
+    <div class="gtm-step">
+      <h4>4. Enterprise Expand</h4>
+      <p>Usage grows &rarr; $75-150K ACV. Compliance add-on. <strong style="color:#fff">NRR: 140%+</strong></p>
     </div>
   </div>
   <br>
   <p class="medium" style="color: #ccc; max-width: 85%; margin: 0 auto; text-align: left;">
     <strong>Specific channels:</strong><br>
-    &bull; <em>Security conferences</em> — RSA, DEF CON, BSides (live demo of real vs VM detection)<br>
-    &bull; <em>Cloud partnerships</em> — OVHcloud, Hetzner, Vultr (mid-tier, no existing attestation)<br>
-    &bull; <em>Compliance channel</em> — SOC 2 auditors as referral partners<br>
-    &bull; <em>Open source community</em> — 248 contributors already evangelizing
+    &bull; <em>Security conferences</em> — BSides, DEF CON (live real-vs-VM demo). Founder-led sales Year 1.<br>
+    &bull; <em>Named target accounts:</em> OVHcloud, Hetzner, Vultr, DigitalOcean, Linode/Akamai, Equinix Metal<br>
+    &bull; <em>Compliance referrals</em> — SOC 2 auditors as channel partners (they see the gap firsthand)<br>
+    &bull; <em>Community</em> — 248 open source contributors already evangelizing in DevOps circles
   </p>
 </section>
 
@@ -376,55 +342,56 @@
   <div class="petal-container">
     <div class="petal-center">
       <strong>Elyan Labs</strong>
-      <span>Lightweight API<br>Multi-signal physics<br>Any architecture<br>$0.01/call</span>
+      <span>Lightweight API<br>6-signal physics<br>Any architecture<br>$0.01/call</span>
     </div>
     <div class="petal petal-1">
       <strong style="color: var(--accent-red);">Intel SGX / TDX</strong>
-      <span>Intel-only. Requires specific chipsets. Enterprise heavyweight.</span>
+      <span>Intel CPUs only. Requires specific chipsets. Heavyweight.</span>
     </div>
     <div class="petal petal-2">
       <strong style="color: var(--accent-warm);">ARM TrustZone</strong>
-      <span>ARM-only. Baked into silicon. Not cross-platform.</span>
+      <span>ARM only. Baked into silicon. Not cross-platform.</span>
     </div>
     <div class="petal petal-3">
       <strong style="color: #ab47bc;">TPM Attestation</strong>
-      <span>Requires physical TPM chip. Not software-deployable. Aging standard.</span>
+      <span>Physical chip required. Not software-deployable. Aging standard.</span>
     </div>
     <div class="petal petal-4">
       <strong style="color: #42a5f5;">Irdeto / Arxan</strong>
-      <span>App-level protection. No hardware identity. DRM-focused.</span>
+      <span>App-level DRM. No hardware identity. Different problem.</span>
     </div>
     <div class="petal petal-5">
       <strong style="color: var(--accent-green);">AMD SEV</strong>
-      <span>AMD-only. VM encryption, not hardware identity. Requires AMD EPYC.</span>
+      <span>AMD EPYC only. VM encryption, not identity.</span>
     </div>
   </div>
-  <br>
-  <p class="small">Our advantage: vendor-neutral, software-only deployment, works on ANY CPU architecture from 1985 to today. No chip vendor lock-in.</p>
+  <p class="small">Our edge: vendor-neutral, software-only, works on ANY CPU (1985 to today). Incumbents are chip-specific. We're the Switzerland of hardware attestation.</p>
 </section>
 
 <!-- ==================== 9. TEAM ==================== -->
 <section>
   <h2>9. Team</h2>
   <br>
-  <div class="founder-story" style="margin-bottom: 1rem;">
-    <p style="font-size: 0.75em; color: var(--accent); font-weight: 700; margin-bottom: 0.3rem;">Scott Boudreaux — Founder &amp; CEO</p>
+  <div class="founder-story" style="margin-bottom: 0.6rem;">
+    <p style="font-size: 0.7em; color: var(--accent); font-weight: 700; margin-bottom: 0.2rem;">Scott Boudreaux — Founder &amp; CEO</p>
     <ul>
-      <li><strong>20+ years hardware experience</strong> — fiber optics, SCADA, data center infrastructure</li>
-      <li><strong>Built fiber for xAI's Colossus 1</strong> — the data center powering Grok (4-6 techs, Aug 2024-Sept 2025)</li>
-      <li><strong>Ai-Blockchain shareholder &amp; dev contributor</strong> — U.S. Patent 10,579,974</li>
+      <li><strong>20+ years hardware &amp; infrastructure</strong> — fiber optics, SCADA, data center builds</li>
+      <li><strong>Built fiber for xAI Colossus 1</strong> — the data center powering Grok (4-6 techs on site)</li>
+      <li><strong>Ai-Blockchain shareholder</strong> — contributed to U.S. Patent 10,579,974</li>
       <li><strong>SEED Center 2022 Pitch Winner</strong> — Technology category, $5K prize</li>
-      <li><strong>CVPR 2026 paper accepted</strong> — GRAIL-V (AI video generation), demonstrating ML research depth</li>
-      <li><strong>OpenSSL contributor</strong> — security patches in production on billions of devices</li>
+      <li><strong>OpenSSL contributor</strong> — security patches merged, used by billions of devices</li>
+      <li><strong>CVPR 2026 paper</strong> — AI video research, demonstrating ML depth beyond infrastructure</li>
     </ul>
   </div>
-  <div style="max-width: 85%; margin: 0 auto; font-size: 0.55em; color: #999; text-align: left;">
-    <strong style="color: var(--accent);">Seeking advisors with coattails of credibility:</strong><br>
-    &bull; Former CISO or VP Infra from a cloud provider (market access + credibility)<br>
-    &bull; Hardware security researcher (technical validation + conference presence)<br>
-    &bull; Enterprise SaaS operator (go-to-market + fundraising experience)<br>
+  <div style="max-width: 85%; margin: 0 auto; font-size: 0.5em; color: #999; text-align: left;">
+    <strong style="color: var(--accent);">Advisors:</strong><br>
+    &bull; <strong style="color: #ccc;">Stephen Reed</strong> — Ai-Blockchain co-founder, U.S. Patent 10,579,974. Distributed systems &amp; blockchain architecture. <span style="color: var(--accent);">LinkedIn: /in/stephenreed</span><br>
+    &bull; <strong style="color: #ccc;">John Reed</strong> — Community ambassador, open source operations, contributor network management<br>
     <br>
-    <strong style="color: #ccc;">Open source community:</strong> 248 paid contributors, 848 GitHub stars, 702 forks<br>
+    <strong style="color: var(--accent-warm);">Actively recruiting:</strong>
+    Cloud CISO or VP Infra (market credibility &amp; buyer access) &middot; Enterprise SaaS operator (GTM &amp; fundraising)<br>
+    <br>
+    <strong style="color: #ccc;">Community:</strong> 248 paid contributors, 848 GitHub stars, 702 forks &middot;
     <span style="color: var(--accent);">LinkedIn: /in/scottjboudreaux</span>
   </div>
 </section>
@@ -435,63 +402,26 @@
   <h3>Bottom-up, 3-year forecast</h3>
   <br>
   <table class="fin-table">
-    <tr>
-      <th></th>
-      <th>Year 1</th>
-      <th>Year 2</th>
-      <th>Year 3</th>
-    </tr>
-    <tr>
-      <td>Enterprise customers</td>
-      <td>3 pilots</td>
-      <td>15</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Avg contract value</td>
-      <td>$25K</td>
-      <td>$150K</td>
-      <td>$300K</td>
-    </tr>
-    <tr>
-      <td>API attestations/mo</td>
-      <td>100K</td>
-      <td>5M</td>
-      <td>50M</td>
-    </tr>
-    <tr>
-      <td><strong>Revenue (ARR)</strong></td>
-      <td>$75K</td>
-      <td>$2.9M</td>
-      <td class="highlight">$15.5M</td>
-    </tr>
-    <tr>
-      <td>Gross margin</td>
-      <td>85%</td>
-      <td>90%</td>
-      <td>92%</td>
-    </tr>
-    <tr>
-      <td>Team size</td>
-      <td>3</td>
-      <td>8</td>
-      <td>18</td>
-    </tr>
-    <tr>
-      <td><strong>Net income</strong></td>
-      <td style="color: var(--accent-red);">($175K)</td>
-      <td>$200K</td>
-      <td class="highlight">$4.2M</td>
-    </tr>
+    <tr><th></th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+    <tr><td>Enterprise customers</td><td>3 pilots</td><td>15</td><td>40</td></tr>
+    <tr><td>Avg contract value</td><td>$25K</td><td>$75K</td><td>$150K</td></tr>
+    <tr><td>API attestations/mo</td><td>500K</td><td>10M</td><td>50M</td></tr>
+    <tr><td><strong>Revenue (ARR)</strong></td><td>$135K</td><td>$2.3M</td><td class="highlight">$6M</td></tr>
+    <tr><td>Gross margin</td><td>88%</td><td>91%</td><td>92%</td></tr>
+    <tr><td>Team size</td><td>2</td><td>6</td><td>14</td></tr>
+    <tr><td>Burn rate/mo</td><td>$25K</td><td>$55K</td><td>$85K</td></tr>
+    <tr><td><strong>Net income</strong></td><td style="color: var(--accent-red);">($165K)</td><td>$160K</td><td class="highlight">$2.2M</td></tr>
   </table>
   <br>
-  <div style="font-size: 0.5em; color: #999; max-width: 80%; margin: 0 auto;">
+  <div style="font-size: 0.45em; color: #999; max-width: 85%; margin: 0 auto;">
     <strong style="color: #ccc;">Key metrics:</strong>
-    CAC target: $5K (dev-led, low-touch) &middot;
-    LTV: $450K (3-year ACV &times; 3yr avg retention) &middot;
-    LTV:CAC ratio: 90:1 &middot;
-    CAC payback: &lt;1 month &middot;
-    Gross margin: 90%+ (software delivery, minimal infrastructure cost)
+    CAC: $2K (dev-led, OSS discovery → free trial → paid) &middot;
+    LTV: $225K (avg $75K ACV &times; 3yr retention) &middot;
+    LTV:CAC: 112:1 &middot;
+    CAC payback: &lt;2 months &middot;
+    NRR target: 140%+ (usage expansion)
+    <br><br>
+    <strong style="color: #ccc;">Assumptions:</strong> Year 1 is founder-led sales, 1 backend hire at Month 3 ($120K). Year 2 adds DevRel ($90K) + 2 engineers. Year 3 adds sales team. $500K seed covers 18+ months runway at Year 1 burn rate. Revenue offsets burn starting Month 10.
   </div>
 </section>
 
@@ -500,23 +430,28 @@
   <h2>11. Traction &amp; Milestones</h2>
   <br>
   <div style="max-width: 85%; margin: 0 auto; text-align: left;">
-    <p style="font-size: 0.65em; color: var(--accent); font-weight: 700; margin-bottom: 0.5rem;">Completed</p>
-    <div style="font-size: 0.55em; color: #ccc; line-height: 1.8;">
-      &check; 6-point hardware fingerprinting engine — live, detecting VMs in &lt;3 seconds<br>
-      &check; 4 attestation nodes deployed (US + Hong Kong) — first international node<br>
+    <p style="font-size: 0.6em; color: var(--accent-green); font-weight: 700; margin-bottom: 0.3rem;">Technical Proof (Completed)</p>
+    <div style="font-size: 0.5em; color: #ccc; line-height: 1.7;">
+      &check; 6-point fingerprinting engine — live, detecting VMs in &lt;3 seconds<br>
+      &check; 4 attestation nodes deployed (US + Hong Kong)<br>
       &check; 12 CPU architectures verified (386 through POWER10, including N64)<br>
-      &check; OpenSSL security patches merged — code in production on billions of devices<br>
-      &check; CVPR 2026 paper accepted — peer-reviewed AI research (video generation)<br>
-      &check; 848 GitHub stars, 702 forks, 248 paid open-source contributors<br>
-      &check; SEED Center 2022 Pitch Winner — Technology category
+      &check; OpenSSL security patches merged — code on billions of devices<br>
+      &check; 848 GitHub stars, 702 forks, 248 paid contributors
     </div>
     <br>
-    <p style="font-size: 0.65em; color: var(--accent-warm); font-weight: 700; margin-bottom: 0.5rem;">Next 18 Months</p>
-    <div style="font-size: 0.55em; color: #999; line-height: 1.8;">
-      Q2 2026 &mdash; Enterprise API launch, first 3 paid pilot deployments<br>
-      Q3 2026 &mdash; SOC 2 Type I certification, first conference demo (BSides/RSA regional)<br>
-      Q4 2026 &mdash; First enterprise contract ($25K+ ACV), 20+ attestation nodes<br>
-      Q1 2027 &mdash; $100K+ ARR, begin Series A conversations
+    <p style="font-size: 0.6em; color: var(--accent); font-weight: 700; margin-bottom: 0.3rem;">Commercial Progress (In Motion)</p>
+    <div style="font-size: 0.5em; color: #ccc; line-height: 1.7;">
+      &bull; Conversations with 3 mid-tier cloud providers about pilot programs<br>
+      &bull; CVPR 2026 paper accepted — research credibility for enterprise buyers<br>
+      &bull; SEED Center 2022 Pitch Winner — prior fundraising/pitch validation
+    </div>
+    <br>
+    <p style="font-size: 0.6em; color: var(--accent-warm); font-weight: 700; margin-bottom: 0.3rem;">Forward Milestones (Next 18 Months)</p>
+    <div style="font-size: 0.5em; color: #999; line-height: 1.7;">
+      Q2 2026 — Enterprise API launch, 3 paid pilot deployments<br>
+      Q3 2026 — SOC 2 Type I, first conference demo (BSides)<br>
+      Q4 2026 — First $25K+ enterprise contract, 20+ nodes<br>
+      Q1 2027 — $100K+ ARR, begin Series A conversations
     </div>
   </div>
 </section>
@@ -525,30 +460,31 @@
 <section>
   <h2>12. The Ask</h2>
   <br>
-  <div style="font-size: 1.8em; font-weight: 900; color: #fff; margin-bottom: 0.3rem;">$250K Seed</div>
-  <p class="medium" style="color: #888; margin-bottom: 0.8rem;">SAFE note &middot; 18 months runway &rarr; 3 pilots &rarr; first enterprise contract</p>
+  <div style="font-size: 1.6em; font-weight: 900; color: #fff; margin-bottom: 0.2rem;">$500K Seed</div>
+  <p class="medium" style="color: #888; margin-bottom: 0.6rem;">SAFE &middot; $4M cap &middot; 20% discount &middot; 18 months runway</p>
   <div class="ask-grid">
     <div class="ask-item">
       <h4>Months 1-6</h4>
-      <p>Enterprise-ready API. 1 backend hire. 3 paid pilot deployments with cloud/AI infra providers.</p>
+      <p>Enterprise API. 1 backend hire. 3 paid pilots with mid-tier cloud providers.</p>
     </div>
     <div class="ask-item">
       <h4>Months 7-12</h4>
-      <p>First enterprise contract ($25K+ ACV). Scale to 20+ attestation nodes. SOC 2 Type I.</p>
+      <p>First $25K+ contract. DevRel hire. SOC 2 Type I certification. 20+ nodes.</p>
     </div>
     <div class="ask-item">
       <h4>Months 13-18</h4>
-      <p>$100K+ ARR. Position for Series A with proven enterprise demand and repeatable sales motion.</p>
+      <p>$100K+ ARR. 15 customers. Series A ready with proven enterprise demand.</p>
     </div>
   </div>
   <br>
   <p class="small" style="color: #999;">
-    <strong style="color: #ccc;">Exit horizon:</strong> 4-5 years. Most likely acquisition by cloud infrastructure provider, hardware security vendor, or AI platform company seeking verified compute capabilities.
+    <strong style="color: #ccc;">Milestone that unlocks Series A:</strong> $100K+ ARR with 3+ enterprise contracts and NRR &gt;120%.<br>
+    <strong style="color: #ccc;">Exit horizon:</strong> 4-5 years. Most likely acquisition by cloud infrastructure or hardware security vendor.
   </p>
   <br>
   <p class="bigquote">"In a world of autonomous machines,<br><em>the hardware doesn't lie.</em>"</p>
   <br>
-  <div style="font-size: 0.55em; color: #888;">
+  <div style="font-size: 0.5em; color: #888;">
     Scott Boudreaux &middot; scott@elyanlabs.ai &middot; 337-692-3750<br>
     <span style="color: var(--accent);">elyanlabs.ai</span> &middot; github.com/Scottcjn &middot; LinkedIn: /in/scottjboudreaux
   </div>
@@ -556,7 +492,6 @@
 
 </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script>
   Reveal.initialize({
